@@ -1,0 +1,339 @@
+$colors: (
+    whiteColor: white,
+    brightRed: hsl(356, 69%, 56%),
+    limeGreen: hsl(163, 72%, 41%),
+    hover:hsl(229, 25%, 84%),
+    //colors for logos
+    fb:hsl(195, 100%, 50%),
+    youtube:hsl(348, 97%, 39%),
+    insta1st:#FDC468,
+    insta2nd:#DF4996,
+    //light mode colors
+    toggleLight:hsl(230, 22%, 74%),
+    topbgPattern:  hsl(225, 100%, 98%),
+    cardBg:  hsl(227, 47%, 96%),
+    grayishText: hsl(228, 12%, 44%),
+    blueText: hsl(230, 17%, 14%),
+    //dark mode colors
+    body: hsl(230, 17%, 14%),   
+    darkTopBg:hsl(232, 19%, 15%),
+    darkcardBg:hsl(228, 28%, 20%),
+    darkcardHover:hsl(229, 26%, 24%),
+    darkText: hsl(228, 34%, 66%)
+);
+html[data-theme = "dark"]{
+    color: white;
+    body{
+        background-color: hsl(230, 17%, 14%);   
+    }
+    .topColor{
+        background-color: hsl(232, 19%, 15%);
+        h1{
+            color: white;
+        }
+        h4{
+            color:hsl(228, 34%, 66%)''
+        }
+        .top-container{
+            div{
+                span{
+                    color: white;
+                }
+            }
+        }
+    }
+    .box{
+        background-color: hsl(228, 28%, 20%);
+        h2{
+            color: white;
+        }
+        h4{
+            color: hsl(228, 34%, 66%);
+        }
+    }
+    .box:hover{
+        background-color: hsl(229, 26%, 24%);
+    }
+    .box2{
+        background-color: hsl(228, 28%, 20%);
+        h3{
+            color: hsl(228, 34%, 66%);
+        }
+        h4{
+            color: white;
+        }
+    }
+    .box2:hover{
+        background-color: hsl(229, 26%, 24%);
+    }
+
+}
+*,
+*:focus,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+body{
+    background-color: map-get($map: $colors, $key: whiteColor);
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    width: 100%;
+    height: 100%;
+}
+.topColor{
+    background-color: map-get($map: $colors, $key: topbgPattern);
+}
+.top-container{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 2%;
+    padding-bottom: 16%;
+    h4{
+        color: map-get($map: $colors, $key: grayishText);
+    }
+}
+// for toggle button starts here
+.switch{
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+}
+.switch input{ 
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.slider{
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, rgba(55,143,230,1) 0%, rgba(62,218,130,1) 100%); 
+    transition: .4s;
+}
+.slider:before{
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 4px;
+    bottom: 4px;
+    // background-color: map-get($map: $colors, $key: whiteColor);
+    background-color: black;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+input:checked + .slider::before{
+    background-color: white;
+}
+input:checked + .slider{
+    background: map-get($map: $colors, $key: toggleLight);
+}
+input:focus + .slider{
+    box-shadow: 0 0 1px map-get($map: $colors, $key: toggleLight);
+}
+input:checked + .slider:before{
+    transform: translateX(26px);
+}
+.slider.round{
+    border-radius: 34px;
+}
+.slider.round:before{
+    border-radius: 50%;
+}
+// for toggle button ends here
+.modeText{
+    display: inline-block;
+    font-weight: bold;
+    color: map-get($map: $colors, $key: toggleLight);
+    position: absolute;
+    right: 112%;
+    top: 8%;
+}
+.divv{
+    position: relative;
+}
+.middle-container{
+    width: 80%;
+    margin: 0 auto;
+    padding: 2%;
+    margin-top: -13%;
+    position: relative;
+    z-index: 4;
+    // background-color: hsl(225, 100%, 98%);
+}
+.grid{
+    display: grid;
+    grid-template-columns: 24% 24% 24% 24%;
+    grid-row-gap: 5%;
+    grid-column-gap: 3%;
+}
+.box{
+    background-color: map-get($map: $colors, $key: cardBg);
+    text-align: center;
+    border-radius: 5px;
+    img{
+        display: inline-block;
+        margin-bottom: -6px;
+    }
+    span a{
+        text-decoration: none;
+        font-weight: bold;
+        color: map-get($map: $colors, $key: grayishText);
+    }
+    h2{
+        font-size: 5em;
+        color: map-get($map: $colors, $key: blueText);
+    }
+    h4{
+        font-weight: lighter;
+        color: map-get($map: $colors, $key: grayishText);
+        letter-spacing: 7px;
+    }
+    div{
+        img{
+            display: inline-block;
+            margin-bottom: 2px;
+        }
+        span{
+            color: map-get($map: $colors, $key: limeGreen);
+            font-weight: bold;
+        }
+    }
+}
+.box:hover{
+    background-color:map-get($map: $colors, $key: hover);
+    cursor: pointer;
+}
+#fb{
+    border-top: 4px solid map-get($map: $colors, $key: fb);
+}
+#twitter{
+    border-top: 4px solid map-get($map: $colors, $key: fb);
+}
+#down{
+    color:  map-get($map: $colors, $key: brightRed);
+}
+#border-insta{
+    border-top: 4px solid transparent;
+    border-image: linear-gradient(to right, map-get($map: $colors, $key: insta1st), map-get($map: $colors, $key: insta2nd));
+    border-image-slice: 1;
+}
+#border-tube{
+    border-top: 4px solid  map-get($map: $colors, $key: brightRed);
+}
+#grid-column{
+    grid-column: 1/ span 4;
+    margin-top: 4%;
+    margin-bottom: 4%;
+    font-size: 2.3em;
+    color:  map-get($map: $colors, $key: grayishText);
+}
+
+.box2{
+    background-color:  map-get($map: $colors, $key: cardBg);
+    padding: 18% 11%;
+    border-radius: 5px;
+}
+.box2:hover{
+    background-color: map-get($map: $colors, $key:hover );
+    cursor: pointer;
+}
+.innerGrid{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-row-gap: 40%;
+    .innerFlex{
+        display: flex;
+        justify-content: space-between;
+        div{
+            margin-top: 26px;
+        }
+    }
+    h3{
+        color: map-get($map: $colors, $key: grayishText);
+    }
+    h4{
+        font-size: 3em;
+    }
+    img{
+        display: inline-block;
+        margin-bottom: 3px;
+    }
+    .greenText{
+        color:  map-get($map: $colors, $key: limeGreen);
+        font-weight: bold;
+    }
+    .redText{
+        color:  map-get($map: $colors, $key: brightRed);
+        font-weight: bold;
+    }
+}
+@media only screen and (max-width:980px){
+    .grid{
+        grid-template-columns: 31.33% 31.33% 31.33%;
+    }
+    #grid-column{
+        grid-column: 1/ span 3;
+    }
+    .modeText{
+        right: 115%;
+        top: 7%;
+    }
+}
+@media only screen and (max-width:750px){
+    .top-container{
+        width: 90%;
+    }
+    .middle-container{
+        width: 90%;
+    }
+    .grid{
+        grid-template-columns: 49% 49%;
+    }
+    #grid-column{
+        grid-column: 1/ span 2;
+    }
+    .modeText{
+        right: 115%;
+        top: 6%;
+    }
+}
+@media only screen and (max-width:650px){
+    .top-container{
+        width: 95%;
+        flex-direction: column;
+        h1{
+            font-size: 1.7em;
+        }
+    }
+    .middle-container{
+        width: 95%;
+    }
+    .grid{
+        grid-template-columns: 98%;
+        grid-column-gap: 0%;
+        grid-row-gap: 1%;
+    }
+    #grid-column{
+        grid-column: 1/ span 1;
+    }
+    .modeText{
+        right: 72%;
+        top: 3%;
+    }
+    .divv{
+        margin-top: 30px;
+        text-align: right;
+    }
+}
+

@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Frontend Mentor | [Challenge Name Here]</title>
+
+  
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <!-- Top container for heading -->
+  <div class="topColor">
+    <div class="top-container">
+      <div>
+        <h1>Social Media Dashboard</h1>
+        <h4>Total Followers: 23,004</h4>
+      </div>
+
+      <div class="divv">
+        <span class="modeText">Dark&nbsp;Mode</span>
+        <label class="switch">
+          <input type="checkbox" id="checkbox" checked>
+          <span class="slider round"></span>
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <div class="middle-container">
+    <div class="grid">
+      <!-- 1st box -->
+      <div class="box" id="fb">
+
+        <br><br><br>
+
+        <img src="images/icon-facebook.svg" alt="facebook icon">
+        <span><a href="#">@nathanf</a></span>
+        <br><br><br>
+        <h2>1987</h2>
+        <h4>FOLLOWERS</h4>
+        <br><br>
+        <div>
+          <img src="images/icon-up.svg" alt="icon down">
+          <span>12 Today</span>
+        </div>
+        <br>
+      </div>
+
+      <!-- 2nd box -->
+      <div class="box" id="twitter">
+
+        <br><br><br>
+
+        <img src="images/icon-twitter.svg" alt="twitter icon">
+        <span><a href="#">@nathanf</a></span>
+        <br><br><br>
+        <h2>1044</h2>
+        <h4>FOLLOWERS</h4>
+        <br><br>
+        <div>
+          <img src="images/icon-up.svg" alt="icon down">
+          <span>99 Today</span>
+        </div>
+        <br>
+      </div>
+
+      <!-- 3rd box -->
+      <div class="box" id="border-insta">
+
+        <br><br><br>
+
+        <img src="images/icon-instagram.svg" alt="icon-instagram">
+        <span><a href="#">@realnathanf</a></span>
+        <br><br><br>
+        <h2>11k</h2>
+        <h4>FOLLOWERS</h4>
+        <br><br>
+        <div>
+          <img src="images/icon-up.svg" alt="icon down">
+          <span>1099 Today</span>
+        </div>
+        <br>
+      </div>
+      <!-- 4th box -->
+      <div class="box" id="border-tube">
+
+        <br><br><br>
+
+        <img src="images/icon-youtube.svg" alt="icon-youtube">
+        <span><a href="#">Nathan F.</a></span>
+        <br><br><br>
+        <h2>8239</h2>
+        <h4>SUBSCRIBERS</h4>
+        <br><br>
+        <div>
+          <img src="images/icon-down.svg" alt="icon down">
+          <span id="down">144 Today</span>
+        </div>
+        <br>
+      </div>
+
+      <h2 id="grid-column">Overview - Today</h2>
+
+      <div class="box2">
+        <!-- 1st box of overview -->
+        <div class="innerGrid">
+          <div class="innerFlex">
+            <h3>Page views</h3>
+            <img src="images/icon-facebook.svg" alt="icon-facebook">
+          </div>
+          <div class="innerFlex">
+            <h4>87</h4>
+            <div>
+              <img src="images/icon-up.svg" alt="icon-up">
+              <span class="greenText">3%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="box2">
+          <!-- 2nd box of overview -->
+        <div class="innerGrid">
+          <div class="innerFlex">
+            <h3>Likes</h3>
+            <img src="images/icon-facebook.svg" alt="icon-facebook">
+          </div>
+          <div class="innerFlex">
+            <h4>52</h4>
+            <div>
+              <img src="images/icon-down.svg" alt="icon-up">
+              <span class="redText">2%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="box2">
+            <!-- 3rd box of overview -->
+        <div class="innerGrid">
+          <div class="innerFlex">
+            <h3>Likes</h3>
+            <img src="images/icon-instagram.svg" alt="icon-instagram">
+          </div>
+          <div class="innerFlex">
+            <h4>5462</h4>
+            <div>
+              <img src="images/icon-up.svg" alt="icon-up">
+              <span class="greenText">2257%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="box2">
+          <!-- 4th box of overview -->
+        <div class="innerGrid">
+          <div class="innerFlex">
+            <h3>Profile views</h3>
+            <img src="images/icon-instagram.svg" alt="icon-instagram">
+          </div>
+          <div class="innerFlex">
+            <h4>52k</h4>
+            <div>
+              <img src="images/icon-up.svg" alt="icon-up">
+              <span class="greenText">1375%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="box2">
+        <!-- 5th box of overview -->
+        <div class="innerGrid">
+          <div class="innerFlex">
+            <h3>Retweets</h3>
+            <img src="images/icon-twitter.svg" alt="icon-twitter">
+          </div>
+          <div class="innerFlex">
+            <h4>117</h4>
+            <div>
+              <img src="images/icon-up.svg" alt="icon-up">
+              <span class="greenText">303%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="box2">
+      <!-- 6th box of overview -->
+        <div class="innerGrid">
+          <div class="innerFlex">
+            <h3>Likes</h3>
+            <img src="images/icon-twitter.svg" alt="icon-twitter">
+          </div>
+          <div class="innerFlex">
+            <h4>507</h4>
+            <div>
+              <img src="images/icon-up.svg" alt="icon-up">
+              <span class="greenText">557%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="box2">
+    <!-- 7th box of overview -->
+        <div class="innerGrid">
+          <div class="innerFlex">
+            <h3>Likes</h3>
+            <img src="images/icon-youtube.svg" alt="icon-youtube">
+          </div>
+          <div class="innerFlex">
+            <h4>107</h4>
+            <div>
+              <img src="images/icon-down.svg" alt="icon-down">
+              <span class="redText">19%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="box2">
+  <!-- 8th box of overview -->
+        <div class="innerGrid">
+          <div class="innerFlex">
+            <h3>Total views</h3>
+            <img src="images/icon-youtube.svg" alt="icon-youtube">
+          </div>
+          <div class="innerFlex">
+            <h4>1407</h4>
+            <div>
+              <img src="images/icon-down.svg" alt="icon-down">
+              <span class="redText">12%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- end of main grid -->
+    </div>
+    <!-- end of sub-contaner -->
+  </div>
+
+  
+  
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+  <br><br><br><br><br><br><br>
+  <!-- <script src="js/script.js"></script> -->
+  <script src="js/script.js">
+  </script>
+</body>
+</html>
